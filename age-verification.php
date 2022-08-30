@@ -20,29 +20,29 @@
             </div>
             <hr>
 
-            <form action="/ViennaDistribution/home.php">
+            <form action="/home.php" class="age-verification-form">
                 
                 
                 <div class="form-container">
                     <div class="input-container">
-                    <div class="input-text">DAY (DD)</div>
-                    <input type="text" id="day">
+                    <div class="input-text"><label>DAY(</label>DD<label>)</label></div>
+                    <input type="number" id="day" min="0" max="31">
                     <div class="blue-bckgrnd"></div>
                     </div>
                     
                     
                     
                     <div class="input-container">
-                    <div class="input-text">MONTH (MM)</div>  
-                    <input type="text" id="month">
+                    <div class="input-text"><label>MONTH (</label>MM<label>)</label></label></div>  
+                    <input type="number" id="month" min="0" max="12">
                     <div class="blue-bckgrnd"></div>
                     </div>
                     
 
                     
                     <div class="input-container">
-                    <div class="input-text">YEAR (YYYY)</div>
-                    <input type="text" id="year">
+                    <div class="input-text"><label>YEAR(</label>YYYY<label>)</label></div>
+                    <input type="number" id="year" min="1920" max="2004" required>
                     <div class="blue-bckgrnd"></div>
                     </div>
                 </div>
@@ -53,21 +53,21 @@
                 
             </form>
         
-            <div class="icons">
+            <div class="icons" id="icons">
             <i class="fa fa-facebook"></i>
             <i class="fa fa-instagram"></i>
             <i class="fa fa-twitter"></i>
             </div>
 
-            <div class="cookies-msg">
+            <div id="cookies-msg" class="cookies-msg">
                 <div class="white-border">
                     <div class="msg">
                     We use cookies on our website to give you the most relevant experience. By clicking “Accept”, you consent to the use of ALL cookies. Alternatively, you may click “Cookie Settings” to provide a controlled consent.
-                     
                     </div>
+                    <br><br><br>
                     <div class="buttons">
-                            <button class="accept-btn">Accept</button>
-                            <button class="settings-btn">cookie settings</button>
+                            <button id="accept-btn" class="accept-btn">Accept</button>
+                            <button id="settings-btn" class="settings-btn">cookie settings</button>
                     </div>
                 </div>
             </div>
@@ -75,4 +75,48 @@
         </div>
 
     </body>
+
+
+    <script>
+        // Aici animez .cookies-msg, ca dupa apasarea butonului ACCEPT sa dispara in jos 
+        document.getElementById("accept-btn").addEventListener("click",function(){
+            var animateDiv = document.getElementById("cookies-msg");
+        
+            var PXForAnimate = 0;
+            var interval = setInterval(animate,0);
+
+            function animate(){
+                if(PXForAnimate == -200){
+                    clearInterval(interval);
+                    PXForAnimate=0;
+                    animateDiv.style.display = "none";
+                    return;
+                }else{
+                    PXForAnimate--;
+                    animateDiv.style.bottom = PXForAnimate+'px';
+                }
+            }
+            
+        });
+
+        document.getElementById("settings-btn").addEventListener("click",function(){
+            var animateDiv = document.getElementById("cookies-msg");
+            var PXForAnimate = 0;
+            var interval = setInterval(animate,0);
+
+            function animate(){
+                if(PXForAnimate == -200){
+                    clearInterval(interval);
+                    PXForAnimate=0;
+                    animateDiv.style.display = "none";
+                    return;
+                }else{
+                    PXForAnimate--;
+                    animateDiv.style.bottom = PXForAnimate+'px';
+                }
+            }
+            
+        });
+    </script>
+
 </html>

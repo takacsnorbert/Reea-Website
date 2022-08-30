@@ -1,3 +1,4 @@
+/* Am declarat cateva variabile */
 :root{
     --body-color: #0D0D0D; 
     --text-color: #FFFFFF;
@@ -12,7 +13,10 @@ body, age-verification-body{
     background-color: var(--body-color);
     align-items:center;
     justify-content: center;
-    
+    border:hidden;
+    height:100vh;
+    overflow-block: hidden;
+
 }
 
 body .container, age-verification{
@@ -21,14 +25,15 @@ body .container, age-verification{
     flex-direction:column;  
     align-items:center;
     justify-content: center;
-    
 }
 
+/* LOGO */
 body .logo-age-verification{
     position:relative;
     margin: 40px;
 }
 
+/* Propozitia de dupa logo */
 body .description{
     position:relative;
     color:var(--text-color);
@@ -48,53 +53,70 @@ body .question{
     font-family: Futura,Trebuchet MS,Arial,sans-serif;
     text-transform: uppercase;
 }
+/* Liniuta de sub intrebare */
 hr{
-    width: 50px;
+    width: 40px;
     height: 1px;
     background-color: var(--boxes-color);
     border:1px solid var(--boxes-color);
 }
 
-form{
-    text-align:center;
+/*Un FORM pentru datele necesare, ZI LUNA AN */
+
+.age-verification-form {
     justify-content:center;
+    text-align:center;
+    
 }
 
 form .form-container{
     display:flex;
+    margin-left: 40px;
 }
 
+/* Am grupat cele trei elemente in cate un div (textul, inputul si backgroundul albastru) */
 form .input-container{
     margin-right: 40px;
     padding-top: 80px;
 }
 
-form .input-text{
-    color:var(--text-color);
-    font-family: var(--text-font-family);
-    display:absolute;
-    letter-spacing: 1.5px;
-    margin-bottom: 15px;
-    margin-left:0px;
-}
+            form .input-text{
+                color:var(--text-color);
+                font-family: var(--text-font-family);
+                display:absolute;
+                letter-spacing: 1.5px;
+                margin-bottom: 15px;
+                margin-left:15px;
+                text-align: left;
+            }
 
-form input{
-    
-    position:absolute;
-    background: rgba(255,255,255,0);
-    border: 2px solid white;
-    width: 166px;
-    height: 55px;
-    margin: -10px;
-    margin-left: -98px;
-}
+            form input{
+                
+                position:absolute;
+                background: rgba(255,255,255,0);
+                border: 2px solid white;
+                width: 166px;
+                height: 55px;
+                margin: -10px;
+                margin-left: -98px;
+                text-align:center;
+                color:var(--text-color);
+            }
 
-form .blue-bckgrnd{
-    background-color: var(--boxes-color);
-    width: 176px;
-    height: 60px;
-}
+            
 
+            form .blue-bckgrnd{
+                background-color: var(--boxes-color);
+                width: 176px;
+                height: 60px;
+            }
+        
+            form input:focus + .blue-bckgrnd{
+                visibility: hidden;
+            }
+           
+
+            /* Butonul de submit din FORM */
 form button{
     width: 302px;
     height: 50px;
@@ -110,9 +132,13 @@ form button:hover{
     background-color: var(--button-color-hover);
 }
 
+    /* Am aranjat iconurile */
+
 div .icons{
+    position:relative;
     display: flex;
     margin-top: 198px;
+    margin-bottom: 150px;
 }
 
 div .icons .fa{
@@ -132,7 +158,10 @@ div .icons i{
     margin-right: 7.5px;
 }
 
+/* Mai jos am personalizat casuta pentru cookies */
+
 body .cookies-msg{
+    position:fixed;
     display:flex;
     color:var(--text-color);
     font-family: var(--text-font-family);
@@ -141,8 +170,9 @@ body .cookies-msg{
     margin-top: 40px;
     background-color: var(--cookies-box-color);
     padding:3px;
+    bottom:0px;
 }
-
+/* Marginea alba */
 body .cookies-msg .white-border{
     display:flex;
     width: 922px;
@@ -151,7 +181,7 @@ body .cookies-msg .white-border{
     margin: 10px;
     align-items: center;
 }
-
+/* Textul din casuta cookie */
 body .cookies-msg .msg{
     position: relative;
     margin: 20px;
@@ -159,6 +189,7 @@ body .cookies-msg .msg{
     font-family: var(--text-font-family);
 }
 
+/* Butoanele din casuta cookie */
 .buttons{
     display:flex;
     flex-direction:row;
@@ -176,7 +207,9 @@ body .cookies-msg .msg{
     margin-right: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    cursor: pointer;
 }
+
 
 .buttons .settings-btn{
     background: rgb(255, 255, 255, 0);
@@ -188,43 +221,70 @@ body .cookies-msg .msg{
     padding-right: 10px;
     margin-right: 10px;
     width: 150px;
+    cursor: pointer;
 }
+
+/* Am adjustat marimile pentru ecrane mai mici, mobile responsive */
 
 @media screen and (max-width: 947px){
 
    
+    body{
+        height: 100%;
+    }
+
+    .container{
+        width:100%;
+        height: 100%;
+    }
 
     div .icons{
-        display:none;
+        position:fixed;
+        margin:0;
+        bottom:50px;
     }
 
     body .logo-age-verification{
         width: 126px;
-        height:100px;
+        height:110px;
     }
 
     body .description{
+        position:relative;
         font-size: 18px;
-        margin-top: -20px;
+        margin: -10px 20px;
     }
 
     body .question{
+        position:relative;
         font-size: 24px;
         margin-top: -66px;
+        width: 280px;
+        text-align: center;
+        letter-spacing: 1.1px;
     }
 
+    form{
+        margin: -50px 0px;
+    }
+    form label{
+        display:none;
+    }
 
     body .cookies-msg{
-        position:relative;
-        height: 100%;
-        width:100%;
+        position:fixed;
+        display:flex;
+        justify-content: center;
+        width: 100%;
+        height: 180px;
+        bottom: 0px;
     }
 
     body .cookies-msg .white-border{
         position:relative;
         display:flex;
         flex-direction: column;
-        height:90%;
+        height:80%;
         width: 100%;
         
     }
@@ -237,12 +297,46 @@ body .cookies-msg .msg{
         margin:15px 10px;
     }
     .buttons{
-        margin-bottom: 15px;
-        margin-left: 0px;
+        position:absolute;
+        
+        bottom: 15px;;
+        left:0;
+        margin-bottom: 0px;
     }
     .buttons .accept-btn{
         margin-left: 15px;
     }
 
+    form button{
+        margin-bottom: 20px;
+    }
+
     
+}
+
+@media screen and (max-width: 650px){
+
+   form .form-container{
+        margin: -20px -50px -15px 0px;
+    }
+
+    form .input-container{
+        position:relative;
+        width: 106px;
+        height: 94px;
+        margin: 0px 20px 0px 0px;
+    }
+    
+    form input{
+        position: absolute;
+        width: 95%;
+        left: -10px;
+        bottom: 10px;
+        margin: 0px;
+    }
+
+    form .blue-bckgrnd{
+        width: auto;
+    }
+
 }
