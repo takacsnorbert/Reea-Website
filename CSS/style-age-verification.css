@@ -1,0 +1,248 @@
+:root{
+    --body-color: #0D0D0D; 
+    --text-color: #FFFFFF;
+    --boxes-color: #54B3A1;
+    --cookies-box-color: #000000;
+    --button-color-hover: #D94016;
+    --button-color: #f34213;
+    --text-font-family: Futura,Trebuchet MS,Arial,sans-serif;
+}
+
+body, age-verification-body{
+    background-color: var(--body-color);
+    align-items:center;
+    justify-content: center;
+    
+}
+
+body .container, age-verification{
+    display:flex;
+    position:relative;
+    flex-direction:column;  
+    align-items:center;
+    justify-content: center;
+    
+}
+
+body .logo-age-verification{
+    position:relative;
+    margin: 40px;
+}
+
+body .description{
+    position:relative;
+    color:var(--text-color);
+    font: 24px/32px Futura;
+    letter-spacing: -0.12px;
+    max-width:750px;
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--text-font-family);
+}
+
+body .question{
+    position: relative;
+    color: var(--text-color);
+    font-size: 32px;
+    padding-top: 118px;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+    text-transform: uppercase;
+}
+hr{
+    width: 50px;
+    height: 1px;
+    background-color: var(--boxes-color);
+    border:1px solid var(--boxes-color);
+}
+
+form{
+    text-align:center;
+    justify-content:center;
+}
+
+form .form-container{
+    display:flex;
+}
+
+form .input-container{
+    margin-right: 40px;
+    padding-top: 80px;
+}
+
+form .input-text{
+    color:var(--text-color);
+    font-family: var(--text-font-family);
+    display:absolute;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    margin-left:0px;
+}
+
+form input{
+    
+    position:absolute;
+    background: rgba(255,255,255,0);
+    border: 2px solid white;
+    width: 166px;
+    height: 55px;
+    margin: -10px;
+    margin-left: -98px;
+}
+
+form .blue-bckgrnd{
+    background-color: var(--boxes-color);
+    width: 176px;
+    height: 60px;
+}
+
+form button{
+    width: 302px;
+    height: 50px;
+    margin-top: 60px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-family: var(--text-font-family);
+    letter-spacing: 1.5px;
+    border-radius: 25px;
+}
+form button:hover{
+    background-color: var(--button-color-hover);
+}
+
+div .icons{
+    display: flex;
+    margin-top: 198px;
+}
+
+div .icons .fa{
+    display:flex;
+    width: 32px;
+    height: 32px;
+    border: 2px solid white;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+
+div .icons i{
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+}
+
+body .cookies-msg{
+    display:flex;
+    color:var(--text-color);
+    font-family: var(--text-font-family);
+    width: 942px;
+    height: 100px;
+    margin-top: 40px;
+    background-color: var(--cookies-box-color);
+    padding:3px;
+}
+
+body .cookies-msg .white-border{
+    display:flex;
+    width: 922px;
+    height: 80px;
+    border: 2px solid white;
+    margin: 10px;
+    align-items: center;
+}
+
+body .cookies-msg .msg{
+    position: relative;
+    margin: 20px;
+    font-size: 15px;
+    font-family: var(--text-font-family);
+}
+
+.buttons{
+    display:flex;
+    flex-direction:row;
+
+}
+
+.buttons .accept-btn{
+    width: 86px;
+    height: 37px;
+    text-transform: uppercase;
+    background-color: var(--boxes-color);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text-color);
+    margin-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.buttons .settings-btn{
+    background: rgb(255, 255, 255, 0);
+    color: var(--text-color);
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    width: 150px;
+}
+
+@media screen and (max-width: 947px){
+
+   
+
+    div .icons{
+        display:none;
+    }
+
+    body .logo-age-verification{
+        width: 126px;
+        height:100px;
+    }
+
+    body .description{
+        font-size: 18px;
+        margin-top: -20px;
+    }
+
+    body .question{
+        font-size: 24px;
+        margin-top: -66px;
+    }
+
+
+    body .cookies-msg{
+        position:relative;
+        height: 100%;
+        width:100%;
+    }
+
+    body .cookies-msg .white-border{
+        position:relative;
+        display:flex;
+        flex-direction: column;
+        height:90%;
+        width: 100%;
+        
+    }
+
+    body .cookies-msg .msg{
+        position:relative;
+        width: 90%;
+        height: 100%;
+        font-size: 13px;
+        margin:15px 10px;
+    }
+    .buttons{
+        margin-bottom: 15px;
+        margin-left: 0px;
+    }
+    .buttons .accept-btn{
+        margin-left: 15px;
+    }
+
+    
+}
