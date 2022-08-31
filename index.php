@@ -2,7 +2,7 @@
 <html>
 <head>
     <!-- Redirectionez automatic -->
-    <meta http-equiv="refresh" content="0;url=http://localhost:8080/ViennaDistribution/age-verification.php">
+    <meta http-equiv="refresh" content="0;url=/age-verification.php">
 </head>
 sziaszia
 </html>

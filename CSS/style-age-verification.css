@@ -10,12 +10,12 @@
 }
 
 body, age-verification-body{
+    display:flex;
     background-color: var(--body-color);
     align-items:center;
     justify-content: center;
     border:hidden;
     height:100vh;
-    overflow-block: hidden;
 
 }
 
@@ -46,12 +46,14 @@ body .description{
 }
 
 body .question{
+    display:flex;
     position: relative;
     color: var(--text-color);
     font-size: 32px;
     padding-top: 118px;
     font-family: Futura,Trebuchet MS,Arial,sans-serif;
     text-transform: uppercase;
+    width:auto;
 }
 /* Liniuta de sub intrebare */
 hr{
@@ -89,6 +91,11 @@ form .input-container{
                 margin-left:15px;
                 text-align: left;
             }
+            /* Ascund sagetile de la number input */
+            input::-webkit-inner-spin-button,
+            input::-webkit-outer-spin-button{
+                -webkit-appearance: none;
+            }
 
             form input{
                 
@@ -101,6 +108,7 @@ form .input-container{
                 margin-left: -98px;
                 text-align:center;
                 color:var(--text-color);
+                -webkit-appearance: none;
             }
 
             
@@ -161,8 +169,8 @@ div .icons i{
 /* Mai jos am personalizat casuta pentru cookies */
 
 body .cookies-msg{
+    
     position:fixed;
-    display:flex;
     color:var(--text-color);
     font-family: var(--text-font-family);
     width: 942px;
@@ -256,10 +264,10 @@ body .cookies-msg .msg{
     }
 
     body .question{
+        display:flex;
         position:relative;
         font-size: 24px;
         margin-top: -66px;
-        width: 280px;
         text-align: center;
         letter-spacing: 1.1px;
     }
@@ -316,6 +324,17 @@ body .cookies-msg .msg{
 
 @media screen and (max-width: 650px){
 
+    body{
+        display: block;
+        width:auto;
+    }
+
+    
+
+    .container{
+        overflow:inherit;
+    }
+
    form .form-container{
         margin: -20px -50px -15px 0px;
     }
@@ -333,10 +352,25 @@ body .cookies-msg .msg{
         left: -10px;
         bottom: 10px;
         margin: 0px;
+        
     }
 
     form .blue-bckgrnd{
         width: auto;
+    }
+
+}
+
+@media screen and (max-width: 430px){
+
+    body{
+        width: 100%;
+    }
+
+    .cookies-msg{
+        display:flex;
+        align-self: flex-start;
+        
     }
 
 }

@@ -3,6 +3,8 @@
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style-age-verification.css">
+
+    <!-- Font Awesome icons/ facebook, instagram, twitter icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
@@ -20,13 +22,13 @@
             </div>
             <hr>
 
-            <form action="/home.php" class="age-verification-form">
+            <form action="home.php" class="age-verification-form">
                 
                 
                 <div class="form-container">
                     <div class="input-container">
                     <div class="input-text"><label>DAY(</label>DD<label>)</label></div>
-                    <input type="number" id="day" min="0" max="31">
+                    <input type="number" id="day" min="0" max="31"> <!-- required -->
                     <div class="blue-bckgrnd"></div>
                     </div>
                     
@@ -34,7 +36,7 @@
                     
                     <div class="input-container">
                     <div class="input-text"><label>MONTH (</label>MM<label>)</label></label></div>  
-                    <input type="number" id="month" min="0" max="12">
+                    <input type="number" id="month" min="0" max="12"> <!-- required -->
                     <div class="blue-bckgrnd"></div>
                     </div>
                     
@@ -42,7 +44,7 @@
                     
                     <div class="input-container">
                     <div class="input-text"><label>YEAR(</label>YYYY<label>)</label></div>
-                    <input type="number" id="year" min="1920" max="2004" required>
+                    <input type="number" id="year" min="1920" max="2004" > <!-- required -->
                     <div class="blue-bckgrnd"></div>
                     </div>
                 </div>
