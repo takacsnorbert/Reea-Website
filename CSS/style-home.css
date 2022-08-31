@@ -1,0 +1,260 @@
+:root{
+    --body-color: #0D0D0D; 
+    --text-color: #FFFFFF;
+    --boxes-color: #54B3A1;
+    --cookies-box-color: #000000;
+    --button-color-hover: #D94016;
+    --button-color: #f34213;
+    --text-font-family: Futura,Trebuchet MS,Arial,sans-serif;
+}
+
+    /* Section-1 */
+
+    body{
+        display:flex;
+        flex-direction: column;
+        /* height: 400px; */
+        margin: 0;
+    }
+
+        .first-section{
+            display:flex;
+            flex-direction: column;
+            position:relative;
+            background-image: url("../Img/home-bckgrnd.png");
+            background-size:cover;
+            background-color: var(--boxes-color);
+            width:auto;
+           height: auto;
+        }
+
+        .box-one{
+            display: block;
+            max-width: 728px;
+            max-height:388px;
+            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,255,255,0));
+            margin: 12vh 26vh 55vh 26vh;
+
+        }
+
+        .first-section .text{
+            position: relative;
+            font-size: 100px;
+            color: white;
+            font-family: var(--text-font-family);
+            text-transform: uppercase;
+            padding: 40px 0px 0px 40px;
+            width: 100%;
+            letter-spacing: -2px;
+        }
+
+
+        /* ----------------- */
+
+        span{
+            position:relative;
+            display:inline-block;
+            z-index:1;
+        }
+
+        span::before{
+            position:absolute;
+            content:'';
+            background-color: var(--boxes-color);
+            top:30px;
+            bottom:30px;
+            left:10px;
+            right:-50px;
+            z-index: -1;
+        }
+
+        .first-section button{
+            position:relative;
+            width: auto;
+            height: 50px;
+            padding: 0px 30px 0px 30px;
+            background-color: var(--button-color);
+            color: var(--text-color);
+            text-transform: uppercase;
+            font-family: var(--text-font-family);
+            letter-spacing: 1.5px;
+            border-radius: 25px;
+            margin: 0 0 30px 40px;
+        }
+
+        .first-section button:hover{
+            background-color: var(--button-color-hover);
+        }
+
+        .middle-blue-column{
+            width: 30px;
+            height: 70px;
+            background-color: var(--boxes-color);
+            position:absolute;
+            align-self: center;
+            bottom:0;
+        }
+
+            /* Mai jos am facut sagetile de pe prima pagina  */
+
+                .first-section .arrow-right{
+                    position: absolute;
+                    border: 5px solid white;
+                    width: 15px;
+                    height:15px;
+                    right:50px;
+                    transform: rotate(45deg);
+                    color: white;
+                    border-color: white white transparent transparent ;
+                }
+                .first-section .arrow-right > div{
+                    display:flex;
+                    position: absolute;
+                    align-self: center;
+                    
+                    transform: rotate(45deg);
+                    height: 10%;
+                    width: 140%;
+                    left: -5px;
+                    bottom: 6px;
+                    border: 5px solid white;
+                    border-color: transparent transparent white transparent;
+                }
+
+                .first-section .arrow-right:hover{
+                    border-color: var(--boxes-color) var(--boxes-color) transparent transparent;
+                }
+
+                .first-section .arrow-right:hover > div{
+                    border-color: transparent transparent var(--boxes-color) transparent;
+                }
+
+
+                /* Sageata din stanga */
+
+                .first-section .arrow-left{
+                    display:flex;
+                    position: absolute;
+                    border: 5px solid white;
+                    width: 15px;
+                    height:15px;
+                    left:50px;
+                    transform: rotate(45deg);
+                    color: white;
+                    border-color:  transparent transparent white white ;
+                }
+                .first-section .arrow-left > div{
+                    display:flex;
+                    position: absolute;
+                    align-self: center;
+                    
+                    transform: rotate(45deg);
+                    height: 10%;
+                    width: 150%;
+                    right: -5px;
+                    top: 6px;
+                    border: 5px solid white;
+                    border-color: white transparent  transparent  transparent;
+                }
+
+                .first-section .arrow-left:hover{
+                    border-color:  transparent transparent var(--boxes-color) var(--boxes-color);
+                }
+
+                .first-section .arrow-left:hover > div{
+                    border-color:  var(--boxes-color) transparent transparent transparent;
+                }
+
+
+        /* Liniutele de pe prima pagina, care indica pe care fotografie te afli */
+        .first-section .bottom-animated-lines{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            display:relative;
+            margin-top:-200px;
+            margin-bottom: 200px;
+        }
+
+        .first-section .bottom-animated-lines > div{
+            border: 2px solid white;
+            width: 32px;
+            background-color: white;
+           
+        }
+
+        .first-section .bottom-animated-lines > div:nth-child(2){
+            transform: rotate(-45deg);
+            background-color: var(--boxes-color);
+            border-color: var(--boxes-color);
+        }
+
+
+
+        /* Section-2 */
+
+        .second-section{
+            position:relative;
+            display:flex;
+            background-color: var(--boxes-color);
+            color:var(--text-color);
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+
+        .second-section .box-two{
+            display: flex;
+            flex-direction: column;
+            position:relative;
+        }
+
+        .second-section .text{
+            font-size: 50px;
+            max-width: 1100px;
+            margin: 200px 0 60px 0;;
+            font-family: var(--text-font-family);
+            text-align:center;
+        }
+
+        .second-section .icons{
+            align-self: center;
+            justify-content: center;
+            margin-bottom: 130px;
+        }
+
+        .second-section .icons > *{
+            display:flex;
+            border: 1px solid white;
+            width: 32px;
+            height: 32px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .second-section .middle-blue-column-2{
+            position:relative;
+            width: 30px;
+            height: 100px;
+            background-color:var(--boxes-color);
+            align-self: center;
+            bottom:-60px;
+            z-index: 11;
+        }
+
+        
+
+        .second-section::after{
+            content:'';
+            width:0;
+            height:0px;
+            right:0;
+            bottom:0;
+            left:0px;
+            position:absolute;
+            border-left: 3000px solid transparent;
+            border-bottom: 100px solid black;
+        }

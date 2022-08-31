@@ -11,7 +11,7 @@
     <body class="age-verification-body" >
         
         <div class="container age-verification" >
-            <img src="logo.png" class="logo-age-verification" alt="VIENNA DISTRIBUTION LOGO" width="185.67" height="161.84">
+            <img src="Img/logo.png" class="logo-age-verification" alt="VIENNA DISTRIBUTION LOGO" width="185.67" height="161.84">
 
             <div class="description">
             Welcome! In order to continue your visit on Vienna distribution, you must be of legal drinking age.

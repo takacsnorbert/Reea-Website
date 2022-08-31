@@ -1,0 +1,39 @@
+:root{
+    --body-color: #0D0D0D; 
+    --text-color: #FFFFFF;
+    --boxes-color: #54B3A1;
+    --cookies-box-color: #000000;
+    --button-color-hover: #D94016;
+    --button-color: #f34213;
+    --text-font-family: Futura,Trebuchet MS,Arial,sans-serif;
+}
+
+
+.container-header{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,1),rgba(255,255,255,0)) ;
+}
+
+img{
+    margin: 25px;
+    margin-right: -220px;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+    text-transform: uppercase;
+    gap:50px;
+    font-size: 17px;
+    color:white;
+    font-family: var(--text-font-family);
+}
+
+.icons{
+    display:flex;
+    gap:25px;
+    color: white;
+    font-size: 17px;
+}
