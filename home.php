@@ -47,6 +47,55 @@
             </div>
             
         </section>
+
+        <section class="third-section">
+            <div class="box-three">
+                <div class="title">
+                    <img src="Img/Cup.png" alt="Cup-icon">
+                    <div class="beverages">Beverages</div>
+                    <div class="cubs-plus-text">
+                        <div class="first-cub"></div>
+                        <div class="product">PRODUCT</div>
+                        <div class="drinks">Rum, whiskey, vodka and more</div>
+                        <div class="range">RANGE</div>
+                        
+                        <div class="second-cub"></div>
+
+                    </div>
+                </div>
+
+                <div class="images">
+                    <div>
+                        <span>BAIJU</span>
+                    </div>
+
+                    <div>
+                        <span>RUM</span>
+                    </div>
+
+                    <div>
+                        <span>WHISKEY</span>
+                    </div>
+
+                    <div>
+                        <span>GIN</span>
+                    </div>
+
+                    <div>
+                        <span>VODKA</span>
+                    </div>
+
+                    <div>
+                        <span>LIQUOR</span>
+                    </div>
+
+                    <div>
+                        <span>BITTER</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
         
         <footer>
             <?php include "./footer.html"?>
