@@ -13,7 +13,7 @@
     body{
         display:flex;
         flex-direction: column;
-        /* height: 400px; */
+        font-family: var(--text-font-family);
         margin: 0;
     }
 
@@ -88,11 +88,12 @@
 
         .middle-blue-column{
             width: 30px;
-            height: 70px;
+            height: 100px;
             background-color: var(--boxes-color);
             position:absolute;
             align-self: center;
-            bottom:0;
+            bottom:-50px;
+            z-index: 20;
         }
 
             /* Mai jos am facut sagetile de pe prima pagina  */
@@ -243,10 +244,10 @@
         .second-section .middle-blue-column-2{
             position:relative;
             width: 30px;
-            height: 100px;
+            height: 200px;
             background-color:var(--boxes-color);
             align-self: center;
-            bottom:-60px;
+            bottom: -150px;
             z-index: 11;
         }
 
@@ -286,7 +287,7 @@
 
         .box-three .title{
             position:relative;
-            margin-top:50px;
+            margin-top:8rem;
             width: fit-content;
         }
 
@@ -380,11 +381,13 @@
                 }
 
             .box-three .images{
-                display: flex;
+                display:flex;
                 flex-wrap: wrap;
-                margin: 7rem 20rem 0 20rem;
+                margin: 8rem 20rem 0 20rem;
                 gap: 30px;
-                width:auto;
+                object-fit: contain;
+                padding: 0;
+                
                 
             }
 
@@ -418,6 +421,7 @@
                     .box-three .images > div:nth-child(1){
                         background-size: cover;
                         background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/baiju2x.png');
+                        
                     }
 
                     .box-three .images > div:nth-child(1)::before{
@@ -432,7 +436,7 @@
                     
                     }
                     .box-three .images > div:nth-child(1):hover::before{
-                        background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.6), rgba(255,255,255,0)),url('../Img/baiju2x.png');
+                        background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(255,255,255,0)),url('../Img/baiju2x.png');
                         transform: scale(1.1);
                         opacity: 1;
                         visibility: visible;
@@ -443,88 +447,516 @@
                         background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/baiju2x.png');
                         opacity: 0;
                         visibility: hidden;
-                        transition: 0.3s, opacity 5s, visibility 0.3s;
+                        transition: 0.3s, opacity 0.3s, visibility 0.3s;
                     }
 
                 /* Pana aici animez prima imagine */
 
-            .box-three .images > div:nth-child(2)::before{
-                position: absolute;
-                width:100%;
-                height: 100%;
-                background-size: cover;
-                content: '';
-                transition: 0.3s;
-                background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/rum.png');
+                    /* Imaginea 2 */
+                .box-three .images > div:nth-child(2){
+                    background-size: cover;
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/rum.png');
+                }
+
+                .box-three .images > div:nth-child(2)::before{
+                    position: absolute;
+                    width:100%;
+                    height: 100%;
+                    background-size: cover;
+                    content: '';
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                    opacity: 0;
+                    visibility: hidden;
+                
+                }
+                .box-three .images > div:nth-child(2):hover::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(255,255,255,0)),url('../Img/rum.png');
+                    transform: scale(1.1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+
+                .box-three .images > div:nth-child(2):not(:hover)::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/rum.png');
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                }
+
+                /* Imaginea 3 */
+                .box-three .images > div:nth-child(3){
+                    background-size: cover;
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/whiskey.png');
+                }
+
+                .box-three .images > div:nth-child(3)::before{
+                    position: absolute;
+                    width:100%;
+                    height: 100%;
+                    background-size: cover;
+                    content: '';
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                    opacity: 0;
+                    visibility: hidden;
+                
+                }
+                .box-three .images > div:nth-child(3):hover::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(255,255,255,0)),url('../Img/whiskey.png');
+                    transform: scale(1.1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+
+                .box-three .images > div:nth-child(3):not(:hover)::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/whiskey.png');
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                }
+
+                /* Imaginea 4 */
+                .box-three .images > div:nth-child(4){
+                    background-size: cover;
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/gin.png');
+                }
+
+                .box-three .images > div:nth-child(4)::before{
+                    position: absolute;
+                    width:100%;
+                    height: 100%;
+                    background-size: cover;
+                    content: '';
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                    opacity: 0;
+                    visibility: hidden;
+                
+                }
+                .box-three .images > div:nth-child(4):hover::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(255,255,255,0)),url('../Img/gin.png');
+                    transform: scale(1.1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+
+                .box-three .images > div:nth-child(4):not(:hover)::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/gin.png');
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                }
+
+                /* imaginea 5 */
+                .box-three .images > div:nth-child(5){
+                    background-size: cover;
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/vodka.png');
+                }
+
+                .box-three .images > div:nth-child(5)::before{
+                    position: absolute;
+                    width:100%;
+                    height: 100%;
+                    background-size: cover;
+                    content: '';
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                    opacity: 0;
+                    visibility: hidden;
+                
+                }
+                .box-three .images > div:nth-child(5):hover::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(255,255,255,0)),url('../Img/vodka.png');
+                    transform: scale(1.1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+
+                .box-three .images > div:nth-child(5):not(:hover)::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/vodka.png');
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                }
+
+                /* Imaginea 6 */
+                .box-three .images > div:nth-child(6){
+                    background-size: cover;
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/liquor.png');
+                }
+
+                .box-three .images > div:nth-child(6)::before{
+                    position: absolute;
+                    width:100%;
+                    height: 100%;
+                    background-size: cover;
+                    content: '';
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                    opacity: 0;
+                    visibility: hidden;
+                
+                }
+                .box-three .images > div:nth-child(6):hover::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(255,255,255,0)),url('../Img/liquor.png');
+                    transform: scale(1.1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+
+                .box-three .images > div:nth-child(6):not(:hover)::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/liquor.png');
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                }
+                
+                /* Imaginea 7 BITTER */
+                .box-three .images > div:nth-child(7){
+                    background-size: cover;
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/bitter.png');
+                }
+
+                .box-three .images > div:nth-child(7)::before{
+                    position: absolute;
+                    width:100%;
+                    height: 100%;
+                    background-size: cover;
+                    content: '';
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                    opacity: 0;
+                    visibility: hidden;
+                
+                }
+                .box-three .images > div:nth-child(7):hover::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.7), rgba(255,255,255,0)),url('../Img/bitter.png');
+                    transform: scale(1.1);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+
+                .box-three .images > div:nth-child(7):not(:hover)::before{
+                    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/bitter.png');
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s, opacity 0.3s, visibility 0.3s;
+                }
+
+            /* NEWS */
+            .middle-blue-column-3{
+                position:relative;
+                width: 30px;
+                height: 100px;
+                background-color:var(--boxes-color);
+                align-self: center;
+                bottom: -50px;
+                margin-top: 150px;
             }
-            .box-three .images > div:nth-child(2):hover::before{
+
+            /* NEWS section */
+            .new-articles{
+                display:flex;
+                position:relative;
+                background-color: black;
+                color:white;
+                justify-content: center;
+                text-align: center;
+                font-family: var(--text-font-family);
+                margin: -1px;
+                flex-wrap: wrap;
+                gap:30px;
+                padding-top: 8rem;
+            }
+
+            .new-articles > div{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 400px;
+                height: 490px;
+                background-image: linear-gradient(to top,rgba(0,0,0,0) 0% 44%, rgba(0,0,0,0.9) 44%,rgba(0,0,0,0.6),rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0)),url("../Img/whisky-bomb.png");
+                background-repeat: no-repeat;
+                background-color: white;
+                align-items:flex-start;
+                justify-content: center;
+                font-size: 18px;
+                overflow: hidden;
+            }
+
+            .new-articles > div > div:nth-child(1){
+                position: absolute;
+                width: 100%;
+                height:55%;
+                top:0;
+                background-image: linear-gradient(to top,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0)),url("../Img/whisky-bomb.png");
+                visibility: hidden;
+                transition: 0.3s;
+            }
+
+            .new-articles > div span{
+                position:relative;
+                left: 2em;
+                top:5%;
+            }
+
+            .new-articles > div::after{
+                width: 95%;
+                height: 95%;
+                border: 2px solid black;
+                content: '';
+                position: absolute;
+                left:2.5%;
+                bottom:2.5%;
+                overflow: hidden;
+                
+            }
+
+
+                /* The articles description   */
+                    .new-articles > div .text{
+                        position: absolute;
+                        display:flex;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 40%;
+                        padding-top: 130px;
+                        color:black;
+                        bottom: 0;
+
+                    }
+
+                    .new-articles > div .text > div:nth-child(1){
+                        display:flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        text-transform: uppercase;
+                        text-align: left;
+                    }
+
+                    .new-articles > div .text b{
+                        position: relative;
+                        width: 38%;
+                        height: min-content;
+
+                    }
+
+                    .new-articles > div .text .icons{
+                        color:gray;
+                        height: min-content;
+                    }
+
+                    .new-articles > div .text .icons > i{
+                        position: relative;
+                        display: flex;
+                        width: 24px;
+                        height: 24px;
+                        border: 2px solid gray;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        
+                    }
+
+                    .new-articles > div .text hr{
+                        position: relative;
+                        margin: 10px 0 25px 1em; 
+                        width:32px;
+                        height:2px;
+                        background-color: black;
+                        border:none;
+                    }
+
+                    .new-articles > div:hover hr {
+                        background-color: var(--boxes-color);
+                    }
+                    .new-articles > div:hover::after{
+                        border-color: var(--boxes-color);
+                    }
+
+                    .new-articles > div:hover .hover-image{
+                        visibility: visible;
+                        transform: scale(1.1);
+                    }
+
+                    .new-articles > div .text .description{
+                        width: 90%;
+                        align-self: center;
+                        text-align: left;
+                    }
+
+            /* Change the images to another 2 section */
+                    /* #2 */
+            .new-articles > div:nth-child(2){
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 400px;
+                height: 490px;
+                background-image: linear-gradient(to top,rgba(0,0,0,0) 0% 44%, rgba(0,0,0,0.9) 44%,rgba(0,0,0,0.6),rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0)),url("../Img/second-atomic.png");
+                background-repeat: no-repeat;
+                background-color: white;
+                align-items:flex-start;
+                justify-content: center;
+                font-size: 18px;
+                overflow: hidden;
+            }
+
+            .new-articles > div:nth-child(2) > div:nth-child(1){
+                position: absolute;
+                width: 100%;
+                height:55%;
+                top:0;
+                background-image: linear-gradient(to top,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0)),url("../Img/second-atomic.png");
+                visibility: hidden;
+                transition: 0.3s;
+            }
+
+            .new-articles > div:nth-child(2):hover .hover-image{
+                visibility: visible;
                 transform: scale(1.1);
             }
 
-            .box-three .images > div:nth-child(3)::before{
-                position: absolute;
-                width:100%;
-                height: 100%;
-                background-size: cover;
-                content: '';
-                transition: 0.3s;
-                background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/whiskey.png');
-            }
-            .box-three .images > div:nth-child(3):hover::before{
-                transform: scale(1.1);
-            }
+                /* #3 */
+
+                .new-articles > div:nth-child(3){
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    width: 400px;
+                    height: 490px;
+                    background-image: linear-gradient(to top,rgba(0,0,0,0) 0% 44%, rgba(0,0,0,0.9) 44%,rgba(0,0,0,0.6),rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0)),url("../Img/headshot-party.png");
+                    background-repeat: no-repeat;
+                    background-color: white;
+                    align-items:flex-start;
+                    justify-content: center;
+                    font-size: 18px;
+                    overflow: hidden;
+                }
+    
+                .new-articles > div:nth-child(3) > div:nth-child(1){
+                    position: absolute;
+                    width: 100%;
+                    height:55%;
+                    top:0;
+                    background-image: linear-gradient(to top,rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0)),url("../Img/headshot-party.png");
+                    visibility: hidden;
+                    transition: 0.3s;
+                }
+    
+                .new-articles > div:nth-child(3):hover .hover-image{
+                    visibility: visible;
+                    transform: scale(1.1);
+                }
+
             
-            .box-three .images > div:nth-child(4)::before{
-                position: absolute;
-                width:100%;
-                height: 100%;
-                background-size: cover;
-                content: '';
-                transition: 0.3s;
-                background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/gin.png');
-            }
-            .box-three .images > div:nth-child(4):hover::before{
-                transform: scale(1.1);
-            }
+        .btn-div{
+            display:flex;
+            justify-content: center;
+            margin-top: -1px;
+            background-color: #000000;
+            padding-top: 3.5em;
+        }
+
+                .btn-div .btn{
+                    background-color: transparent;
+                    border:none;
+                }
+
+                .btn-div .btn::before{
+                    display: flex;
+                    white-space: nowrap;
+                    text-align: center;
+                    position: relative;
+                    content:"Read more Stories on our news page";
+                    background-color: var(--button-color);
+                    padding: 0.8em 2em;
+                    border-radius: 20px;
+                    color:white;
+                    font-family: var(--text-font-family);
+                    text-transform: uppercase;
+                    transition: 0.1s;
+                    width: 16rem;
+                    height:1rem;
+                }
+
+                .btn-div .btn:hover::before{
+                    content: "Read more Stories on our blog";
+                    text-align: right;
+                    background-color: var(--button-color-hover);
+                    width:14rem;
+                }
+
+
+        /* FOURTH Section */
+
+        .fourth-section{
+            background-color: var(--cookies-box-color);
+            margin-top:-1px;
+            position: relative;
+            color:var(--text-color);
+        }
+
+        .fourth-section .title{
+            position:relative;
+            display:block;
+            margin:auto;
+            margin-top:8rem;
+            width: fit-content;
+            text-align: center;
+        }
+
+        .middle-blue-column-4{
+            display: block;
+            position:relative;
+            width: 30px;
+            height: 100px;
+            background-color:var(--boxes-color);
+            margin:auto;
+            margin-top: 7rem;
+        }
+
+        .fourth-section .images{
             
-            .box-three .images > div:nth-child(5)::before{
-                position: absolute;
-                width:100%;
+            display:grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 30px;
+            margin-top: 7rem;
+            margin-bottom: 7rem;
+        }
+
+            .fourth-section .images > img{
+                width: 100%;
                 height: 100%;
-                background-size: cover;
-                content: '';
-                transition: 0.3s;
-                background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/vodka.png');
-            }
-            .box-three .images > div:nth-child(5):hover::before{
-                transform: scale(1.1);
+                object-fit: cover;
+                margin:0;
             }
 
-            .box-three .images > div:nth-child(6)::before{
-                position: absolute;
-                width:100%;
-                height: 100%;
-                background-size: cover;
-                content: '';
-                transition: 0.3s;
-                background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/liquor.png');
-            }
-            .box-three .images > div:nth-child(6):hover::before{
-                transform: scale(1.1);
+            .grid-rows-2{
+                grid-row: span 2;
             }
 
-            .box-three .images > div:nth-child(7)::before{
+            .fourth-section .images .btn{
+                background-color: var(--button-color);
+                display:flex;
+                
                 position: absolute;
-                width:100%;
-                height: 100%;
-                background-size: cover;
-                content: '';
-                transition: 0.3s;
-                background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,255,255,0)),url('../Img/bitter.png');
+                border:none;
+                padding: 0.7rem 1.7rem;
+                white-space: nowrap;
+                border-radius: 20px;
+                bottom:0;
+                justify-self: center;
+                color: var(--text-color);
+                text-transform: uppercase;
+                transition: 0.3s, ease-out;
             }
-            .box-three .images > div:nth-child(7):hover::before{
-                transform: scale(1.1);
+        
+            .fourth-section .images .btn:hover{
+                background-color: var(--button-color-hover);
             }
+                
 
 
         /* FOOTER */
