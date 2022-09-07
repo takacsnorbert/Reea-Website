@@ -270,7 +270,7 @@
         .third-section{
             display:flex;
             position:relative;
-            background-color: black;
+            background-color: var(--body-color);
             color:white;
             justify-content: center;
             text-align: center;
@@ -659,7 +659,7 @@
             .new-articles{
                 display:flex;
                 position:relative;
-                background-color: black;
+                background-color: var(--body-color);
                 color:white;
                 justify-content: center;
                 text-align: center;
@@ -721,7 +721,6 @@
                         flex-direction: column;
                         width: 100%;
                         height: 40%;
-                        padding-top: 130px;
                         color:black;
                         bottom: 0;
 
@@ -855,7 +854,7 @@
             display:flex;
             justify-content: center;
             margin-top: -1px;
-            background-color: #000000;
+            background-color: var(--body-color);
             padding-top: 3.5em;
         }
 
@@ -876,24 +875,24 @@
                     color:white;
                     font-family: var(--text-font-family);
                     text-transform: uppercase;
-                    transition: 0.1s;
-                    width: 16rem;
-                    height:1rem;
+                    transition-duration: 3s;
+                    width: auto;
+                    height:auto;
                 }
 
                 .btn-div .btn:hover::before{
                     content: "Read more Stories on our blog";
-                    text-align: right;
+                    text-align: center;
                     background-color: var(--button-color-hover);
-                    width:14rem;
+                    
                 }
 
 
         /* FOURTH Section */
 
         .fourth-section{
-            background-color: var(--cookies-box-color);
-            margin-top:-1px;
+            background-color: var(--body-color);
+            margin-top:-2px;
             position: relative;
             color:var(--text-color);
         }
@@ -943,7 +942,7 @@
                 
                 position: absolute;
                 border:none;
-                padding: 0.7rem 1.7rem;
+                padding: 0.8em 2em;
                 white-space: nowrap;
                 border-radius: 20px;
                 bottom:0;
@@ -957,6 +956,235 @@
                 background-color: var(--button-color-hover);
             }
                 
+        /* FIFTH section */
+        .middle-blue-column-5, .middle-blue-column-6{
+            display: block;
+            position:relative;
+            width: 30px;
+            height: 100px;
+            background-color:var(--boxes-color);
+            margin:auto;
+            margin-top: 10rem;
+        }
+
+        .fifth-section{
+            background-color: var(--body-color);
+            margin-top:-2px;
+            
+        }
+
+            .fifth-section .title{
+                color:white;
+                text-transform: uppercase;
+                display:flex;
+                position: relative;
+                font-size: 73px;
+                width: 80rem;
+                text-align: center;
+                justify-self: center;
+                margin:auto;
+                margin-top: 3rem;
+                
+            }
+
+            .fifth-section .infos{
+                display:grid;
+                grid-template-columns: repeat(3,1fr);
+                width: max-content;
+                position:relative;
+                gap: 15em;
+                justify-content: center;
+                margin:auto;
+                margin-top: 10rem;
+            }
+
+            .fifth-section .infos > div{
+                position: relative;
+                width: 28rem;
+                border-left: 3px solid white;
+                padding-left: 2em;
+            }
+
+            
+
+            .fifth-section .infos img{
+                color:white;
+                margin:0;
+                position: relative;
+            }
+            
+            .fifth-section .infos h1{
+                color:var(--text-color);
+                font-size: 32px;
+                padding-top: 1em;
+                font-weight: bold;
+            }
+
+            .fifth-section .infos .description{
+                position: relative;
+                color:var(--text-color);
+                margin-bottom: 1.5em;
+                width: 26.9rem;
+                font-size: 18px;
+            }
+
+            .fifth-section .infos a{
+                display:inline-flex;
+                flex-wrap: nowrap;
+                white-space: nowrap;
+                align-items: center;
+                color:var(--text-color);
+                text-decoration: none;
+                transform: color 0.3s;
+            }
+
+            .fifth-section .infos a:hover{
+                color: var(--boxes-color);
+            }
+
+            .fifth-section .infos a svg{
+                position:relative;
+                transition: 0.3s;
+                color:white;
+                height: 23px;
+                width:33px;
+            }
+
+            .fifth-section .infos a:hover  svg{
+                transform: translateX(1em);
+                color:var(--boxes-color);
+            }
+
+
+        /* SIXTH Section */
+        .sixth-section{
+            background-color: var(--body-color);
+            display:flex;
+            position: relative;
+            color:var(--text-color);
+            flex-direction: column;
+            align-items: center;
+            margin-top:-2px;
+        }
+
+        .sixth-section .title{
+            font-size: 73px;
+            width: 75rem;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 4rem;
+        }
+
+        .sixth-section .things{
+            position:relative;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 5rem;
+            width: 75%;
+            gap: 3rem;
+            padding: 0 5rem 5rem 0;
+        }
+
+        .sixth-section .things > div{
+            position:relative;
+            overflow: hidden;
+            z-index: 0;
+
+        }
+
+        
+
+        .sixth-section .things > div::before{
+            content:'';
+            position:absolute;
+            left:0;
+            bottom:0;
+            top:0;
+            
+            margin:auto;
+            align-items: flex-end;
+            justify-content: flex-start;
+            
+            height: 90%;
+            z-index: 1;
+            font-size: 40px;
+            border-bottom: 3px solid var(--boxes-color);
+            width: 10%;
+            content:'';
+            left:5%;bottom: 0;
+            opacity: 1;
+            transition: opacity 3s;
+        }
+
+        .sixth-section .things > div:hover::before{
+           
+            position:absolute;
+            display:flex;
+            visibility: visible;
+            left:0;
+            right:0;
+            top:0; bottom:0;
+            margin:auto;
+            width: 90%;
+            height: 90%;
+            border: 3px solid var(--boxes-color);
+            
+        }
+
+        .sixth-section .things > div img{
+            position: relative;
+            width:  100%;
+            height: 100%;
+            object-fit: cover;
+            margin:0;
+            transition-duration: 0.3s;
+            
+        } 
+
+        .sixth-section .things > div:hover img{
+            scale: 1.1;
+        }
+
+        /* RIGHT ARROW */
+        .sixth-section .things > div svg{
+                position:absolute;
+                transition: 0.3s;
+                color:white;
+                height: 35px;
+                width:50px;
+                right: 65px;
+                bottom: 50px;
+                color:var(--boxes-color);
+                visibility: hidden;
+                opacity:0;
+                transition: 0.3s, visibility 0.3s, opacity 0.3s; 
+        }
+
+        .sixth-section .things > div:hover svg{
+            visibility: visible;
+            opacity: 1;
+            right: 40px;
+        }
+
+        .sixth-section .things > div .text{
+            color: white;
+            position: absolute;
+            bottom: 2.1rem;
+            left: 2.5rem;
+            font-size: 35px;
+            width: 47%;
+            transition: 0.3s;
+            
+        }
+
+        .sixth-section .things > div:hover .text{
+            margin: 0 0 0.5rem 2rem;
+        }
+
+
+
+        
 
 
         /* FOOTER */
