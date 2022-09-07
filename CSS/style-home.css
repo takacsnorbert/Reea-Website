@@ -10,8 +10,13 @@
 
     /* Section-1 */
 
+html{
+    width:100%;
+}
+
     body{
         display:flex;
+        position: relative;
         flex-direction: column;
         font-family: var(--text-font-family);
         margin: 0;
@@ -22,10 +27,14 @@
             flex-direction: column;
             position:relative;
             background-image: url("../Img/home-bckgrnd.png");
+            object-fit: cover;
             background-size:cover;
+            
             background-color: var(--boxes-color);
+            
             width:auto;
-           height: auto;
+            height:auto;
+            background-repeat: no-repeat;
         }
 
         .box-one{
@@ -93,14 +102,14 @@
             position:absolute;
             align-self: center;
             bottom:-50px;
-            z-index: 20;
+            z-index: 1;
         }
 
             /* Mai jos am facut sagetile de pe prima pagina  */
 
                 .first-section .arrow-right{
                     position: absolute;
-                    border: 5px solid white;
+                    border: 3px solid white;
                     width: 15px;
                     height:15px;
                     right:50px;
@@ -116,10 +125,10 @@
                     
                     transform: rotate(45deg);
                     height: 0;
-                    width: 100%;
-                    left: -5px;
-                    bottom: 2.5px;
-                    border: 5px solid white;
+                    width: 120%;
+                    left: 1px;
+                    bottom: 3px;
+                    border: 3px solid white;
                     border-color: transparent white white white;
                     border-radius: 50% 50% 0 0;
                 }
@@ -138,7 +147,7 @@
                 .first-section .arrow-left{
                     display:flex;
                     position: absolute;
-                    border: 5px solid white;
+                    border: 3px solid white;
                     width: 15px;
                     height:15px;
                     left:50px;
@@ -154,10 +163,10 @@
                     
                     transform: rotate(45deg);
                     height: 0;
-                    width: 100%;
-                    right: -5px;
-                    top: 2.5px;
-                    border: 5px solid white;
+                    width: 120%;
+                    right: 1px;
+                    top: 3px;
+                    border: 3px solid white;
                     border-color: white white  transparent  white;
                     border-radius: 0 0 50% 50%;
                 }
@@ -226,9 +235,11 @@
         }
 
         .second-section .icons{
+            display:flex;
             align-self: center;
             justify-content: center;
             margin-bottom: 130px;
+            gap: 15px;
         }
 
         .second-section .icons > *{
@@ -248,7 +259,7 @@
             background-color:var(--boxes-color);
             align-self: center;
             bottom: -150px;
-            z-index: 11;
+            z-index: 1;
         }
 
         
@@ -875,8 +886,8 @@
                     color:white;
                     font-family: var(--text-font-family);
                     text-transform: uppercase;
-                    transition-duration: 3s;
-                    width: auto;
+                    transition-duration: 0.3s;
+                    width: 32rem;
                     height:auto;
                 }
 
@@ -884,7 +895,7 @@
                     content: "Read more Stories on our blog";
                     text-align: center;
                     background-color: var(--button-color-hover);
-                    
+                    width: 28rem;
                 }
 
 
@@ -1154,7 +1165,7 @@
                 height: 35px;
                 width:50px;
                 right: 65px;
-                bottom: 50px;
+                bottom: 4rem;
                 color:var(--boxes-color);
                 visibility: hidden;
                 opacity:0;
@@ -1173,8 +1184,8 @@
             bottom: 2.1rem;
             left: 2.5rem;
             font-size: 35px;
-            width: 47%;
-            transition: 0.3s;
+            max-width: 43%;
+            transition: 0.3s ease-out;
             
         }
 
