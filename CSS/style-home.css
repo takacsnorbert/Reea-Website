@@ -10,31 +10,30 @@
 
     /* Section-1 */
 
-html{
-    width:100%;
-}
+
 
     body{
         display:flex;
         position: relative;
         flex-direction: column;
         font-family: var(--text-font-family);
-        margin: 0;
+        
     }
 
         .first-section{
             display:flex;
             flex-direction: column;
             position:relative;
-            background-image: url("../Img/home-bckgrnd.png");
-            object-fit: cover;
-            background-size:cover;
-            
             background-color: var(--boxes-color);
-            
-            width:auto;
-            height:auto;
             background-repeat: no-repeat;
+            height: min-content;
+        }
+
+        .first-section .bckgrnd-image {
+            position:absolute;
+            width:100%;
+            image-rendering: auto;
+            
         }
 
         .box-one{
@@ -95,15 +94,7 @@ html{
             background-color: var(--button-color-hover);
         }
 
-        .middle-blue-column{
-            width: 30px;
-            height: 100px;
-            background-color: var(--boxes-color);
-            position:absolute;
-            align-self: center;
-            bottom:-50px;
-            z-index: 1;
-        }
+        
 
             /* Mai jos am facut sagetile de pe prima pagina  */
 
@@ -183,12 +174,12 @@ html{
         /* Liniutele de pe prima pagina, care indica pe care fotografie te afli */
         .first-section .bottom-animated-lines{
             display: flex;
+            position: relative;
             align-items: center;
             justify-content: center;
             gap: 20px;
             display:relative;
-            margin-top:-200px;
-            margin-bottom: 200px;
+            bottom:300px;
         }
 
         .first-section .bottom-animated-lines > div{
@@ -204,6 +195,16 @@ html{
             border-color: var(--boxes-color);
         }
 
+
+        .middle-blue-column{
+            width: 30px;
+            height: 100px;
+            background-color: var(--boxes-color);
+            position:absolute;
+            align-self: center;
+            bottom:80px;
+            z-index: 1;
+        }
 
 
         /* Section-2 */
@@ -1076,6 +1077,7 @@ html{
             flex-direction: column;
             align-items: center;
             margin-top:-2px;
+            margin-bottom: -2px;
         }
 
         .sixth-section .title{
@@ -1203,4 +1205,5 @@ html{
         footer{
             position:relative;
             bottom:0;
+            overflow: hidden;
         }

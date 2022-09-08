@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="eu">
+<html lang="en">
     <head >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style-home.css">
 
+    <title>Vienna Distribution</title>
+
     </head>
 
     <body >
+        
         <section class="first-section">
             <header>
                 <?php include "./header.html"?>
             </header>
+
+            <img class="bckgrnd-image" src="Img/home-bckgrnd.png" alt="">
             <div class="box-one">
 
                 <div class="text">
@@ -303,7 +308,6 @@
             <?php include "./footer.html"?>
         </footer>
 
-        <i class="bi bi-arrow-right"></i>
 
 
 
