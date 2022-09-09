@@ -11,7 +11,6 @@
     /* Section-1 */
 
 
-
     body{
         display:flex;
         position: relative;
@@ -26,14 +25,23 @@
             position:relative;
             background-color: var(--boxes-color);
             background-repeat: no-repeat;
-            height: min-content;
+            height: fit-content;
         }
 
         .first-section .bckgrnd-image {
             position:absolute;
             width:100%;
-            image-rendering: auto;
+            background-position: center ;
+            background-size: auto;
             
+        }
+
+        .first-section .bckgrnd-image img{
+            position: absolute;
+            
+            height: 110vh;
+            width:100%;
+            margin: 0;
         }
 
         .box-one{
@@ -42,6 +50,7 @@
             max-height:388px;
             background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,255,255,0));
             margin: 12vh 26vh 55vh 26vh;
+            z-index:1;
 
         }
 
@@ -175,11 +184,10 @@
         .first-section .bottom-animated-lines{
             display: flex;
             position: relative;
-            align-items: center;
             justify-content: center;
             gap: 20px;
-            display:relative;
-            bottom:300px;
+            top: -300px;
+
         }
 
         .first-section .bottom-animated-lines > div{
@@ -200,9 +208,9 @@
             width: 30px;
             height: 100px;
             background-color: var(--boxes-color);
-            position:absolute;
+            position:relative;
             align-self: center;
-            bottom:80px;
+            bottom:170px;
             z-index: 1;
         }
 
@@ -756,6 +764,9 @@
                     .new-articles > div .text .icons{
                         color:gray;
                         height: min-content;
+                        display:flex;
+                        gap: 1rem;
+                        font-size: 1.4rem;
                     }
 
                     .new-articles > div .text .icons > i{
@@ -767,6 +778,7 @@
                         align-items: center;
                         justify-content: center;
                         border-radius: 50%;
+                        padding-top:0.2rem;
                         
                     }
 

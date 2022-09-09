@@ -20,7 +20,9 @@
                 <?php include "./header.html"?>
             </header>
 
-            <img class="bckgrnd-image" src="Img/home-bckgrnd.png" alt="">
+            <div class="bckgrnd-image">
+            <img  src="Img/home-bckgrnd.png" alt="">
+            </div>
             <div class="box-one">
 
                 <div class="text">
