@@ -248,7 +248,7 @@
                     <img src="Img/gastronomy.png" alt="GASTRONOMY picture" width="214px" height="200px">
                     <h1>GASTRONOMY</h1>
                     <div class="description">Aangezien wij in de filosofie ‘merken bouw je in de horeca’ geloven, schieten wij daar met scherp. De juiste doelgroep op het juiste moment.</div>
-                    <a href="#">Find out more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <a >Find out more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg></a>
                 </div>
@@ -257,7 +257,7 @@
                     <img src="Img/retail.png" alt="GASTRONOMY picture" width="214px" height="200px">
                     <h1>RETAIL</h1>
                     <div class="description">We zijn in elk segment thuis en bouwen graag samen aan structurele merk-en categorie. We bieden producten voor iedere consument.</div>
-                    <a href="#">Find out more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <a>Find out more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg> </a>
                 </div>
@@ -266,7 +266,7 @@
                     <img src="Img/events.png" alt="GASTRONOMY picture" width="214px" height="200px">
                     <h1>EVENTS</h1>
                     <div class="description">Evenementen en merken versterken elkaar. Op de evenementen waar wij actief zijn zorgen we dat onze merken bijdragen aan de totaalbeleving.</div>
-                    <a href="#">Find out more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <a >Find out more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg> </a>
                 </div>

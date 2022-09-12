@@ -37,7 +37,6 @@ body{
 
 .container-header img{
     margin: 25px;
-    margin-right: -220px;
 }
 
 .container-header ul{
@@ -59,6 +58,7 @@ body{
 
 .container-header ul > li{
     cursor:pointer;
+    transition: all 0.5s;
 }
 
 .container-header ul > li::after{
@@ -79,6 +79,23 @@ body{
     opacity: 1;
     width:100%;
 }
+@media screen and (max-width:1500px) {
+    .container-header img{
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .container-header ul > li{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
 
         /* ON SCROLL HEADER */
 
@@ -98,7 +115,6 @@ body{
 
 .container-header-fixed img{
     margin: 25px;
-    margin-right: -220px;
 }
 
 .container-header-fixed ul{
@@ -109,6 +125,7 @@ body{
     font-size: 17px;
     color:white;
     font-family: var(--text-font-family);
+    transition: all 0.5s;
 }
 
 .container-header-fixed .icons{
@@ -116,10 +133,12 @@ body{
     gap:25px;
     color: white;
     font-size: 17px;
+    transition: all 0.5s;
 }
 
 .container-header-fixed ul > li{
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 .container-header-fixed ul > li:nth-child(1)::after{
@@ -149,4 +168,26 @@ body{
     visibility: visible;
     opacity: 1;
     width:100%;
+}
+
+
+@media screen and (max-width:1500px) {
+
+    .container-header-fixed img{
+        width: 200px;
+        height: 35px;
+    }
+
+    .container-header-fixed ul{
+        gap:30px;
+    }
+
+    .container-header-fixed ul > li{
+        font-size: 13px;
+       
+    }
+
+    .container-header-fixed .icons{
+        font-size: 13px;
+    }
 }
