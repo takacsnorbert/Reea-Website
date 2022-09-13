@@ -1524,7 +1524,7 @@ body{
 
     .first-section .bottom-animated-lines{
         position: relative;
-        bottom:140px;
+        bottom:25vh;
     }
 
     .first-section .text{
@@ -1699,6 +1699,19 @@ body{
     .sixth-section .title{
         width:100%;
     }
+}
+
+@media screen and (max-width:750px) {
+
+    .first-section{
+        overflow-x: hidden;
+    }
+
+    .first-section .bckgrnd-image{
+        width: 200%;
+        align-self: center;
+    }
+    
 }
 
 @media screen and (max-width: 470px) {
