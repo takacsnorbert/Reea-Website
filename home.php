@@ -20,27 +20,63 @@
                 <?php include "./header.html"?>
             </header>
 
-            <div class="bckgrnd-image">
-            <img  src="Img/home-bckgrnd.png" alt="">
+                <!-- MOBILE MENU -->
+            <div class="mobile-menu-container" id="mobile-menu-container">
+                <img src="Img/logo.png" alt="Logo">
+
+                <ul>
+                    <li class="home">Home</li>
+                    <li>Brands We Work With</li>
+                    <li>Brand Gallery</li>
+                    <li>New</li>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                </ul>
+
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+
+                    <div id="close-mobile-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </div>
             </div>
+
+                <!-- MOBILE MENU END -->
+        
+            <div class="bckgrnd-image">
+                <img  src="Img/home-bckgrnd.png" alt="">
+            </div>
+
+            <div class="mobile-gradient-background"></div>
+            
             <div class="box-one">
 
-                <div class="text">
-                Drink less, Drin<span>k better.</span>
-                
+                <div class="lin-gradient">
+                    <div class="text">
+                    Drink less,<div> Drin<span>k better.</span></div>
+                    
+                    </div>
+                    <button>FIND OUT MORE</button>
+                    <div class="arrow-right"><div></div></div>
+                    <div class="arrow-left"><div></div></div>
+                    
                 </div>
-                <button>FIND OUT MORE</button>
-                <div class="arrow-right"><div></div></div>
-                <div class="arrow-left"><div></div></div>
                 
+
             </div>
             
-            <div class="bottom-animated-lines">
-                <div></div> <!-- Cele 4 linii de jos -->
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <div class="bottom-animated-lines"><!-- Cele 4 linii de jos -->
+                    <div></div> 
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            
             <div class="middle-blue-column"></div>
         </section>
 
@@ -54,12 +90,13 @@
                     <i class="fa fa-instagram"></i>
                     <i class="fa fa-twitter"></i>
                 </div>
-                <div class="middle-blue-column-2"></div>
+                
             </div>
             
         </section>
 
         <section class="third-section">
+            <div class="middle-blue-column-2"></div>
             <div class="box-three">
                 <div class="title">
                     <img src="Img/Cup.png" alt="Cup-icon">
@@ -108,7 +145,7 @@
                 <div class="middle-blue-column-3"></div>
 
                 <!-- NEWS BOX -->
-                <div class="title">
+                <div class="title title-2">
                     <img src="Img/news.png" alt="Cup-icon">
                     <div class="beverages">NEWS</div>
                     <div class="cubs-plus-text">
@@ -234,8 +271,22 @@
                     <img src="Img/brand-gallery/9.png" alt="9th-picture">
                     <img src="Img/brand-gallery/10.png" alt="10th-picture">
                     
-                    <button type="submit" class="btn">Take me to the brand gallery</button>
                 </div>
+
+                <div class="images-mobile">
+                    <img class="grid-rows-2" src="Img/brand-gallery/1.png" alt="1st-picture">
+                    <img src="Img/brand-gallery/2.png" alt="2nd-picture">
+                    <img src="Img/brand-gallery/3.png" alt="3rd-picture">
+                    <img src="Img/brand-gallery/4.png" alt="4th-picture">
+                    <img src="Img/brand-gallery/5.png" alt="5th-picture">
+                    <img src="Img/brand-gallery/7.png" alt="7th-picture">
+                    <img src="Img/brand-gallery/8.png" alt="8th-picture">
+                    <img class="grid-rows-2" src="Img/brand-gallery/6.png" alt="6th-picture">
+                    <img src="Img/brand-gallery/9.png" alt="9th-picture">
+                    <img src="Img/brand-gallery/10.png" alt="10th-picture">
+                </div>
+
+                <button type="submit" class="btn">Take me to the brand gallery</button>
             
         </section>
 
@@ -281,7 +332,7 @@
             <div class="things">
                 
                 <div><img src="Img/new-world-whisky.png" alt="">
-                    <div class="text">NEW WORLD WHISKY</div>
+                    <div class="text" style="white-space:nowrap;">NEW WORLD <div> WHISKY</div></div>
                     <!-- RIGHT ARROW -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
@@ -310,7 +361,27 @@
             <?php include "./footer.html"?>
         </footer>
 
+        <script>
+            // Animate the mobile menu OPEN - CLOSE 
+            
 
+            const Close = document.getElementById("close-mobile-menu");
+            const theMenu = document.getElementById("mobile-menu-container");
+            Close.addEventListener("click", () => {
+                theMenu.style.margin = "0 0 0 100%";
+            });
+
+            const Open = document.getElementById("mobile-menu-btn");
+            Open.addEventListener("click", () =>{
+                theMenu.style.margin = "0 0 0 0";
+            });
+
+            const Open2 = document.getElementById("mobile-menu-btn-fix");
+            Open2.addEventListener("click", () =>{
+                theMenu.style.margin = "0 0 0 0";
+            });
+
+        </script>
 
 
     </body>

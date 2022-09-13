@@ -8,6 +8,63 @@
     --text-font-family: Futura,Trebuchet MS,Arial,sans-serif;
 }
 
+body{
+    min-width: 375px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    /* MOBILE menu */
+    .mobile-menu-container{
+        display:none;
+        background-color: black;
+        color:white;
+        padding: 3rem;
+        padding-top: 2rem;
+    }
+    
+    .mobile-menu-container img{
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    .mobile-menu-container ul{
+        display:flex;
+        flex-direction: column;
+        list-style: none;
+        font-style: var(--text-font-family);
+        padding:0;
+        font-size: 32px;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+    
+    .mobile-menu-container ul .home{
+        border-bottom: 2px solid var(--boxes-color);
+        width: min-content;
+    }
+    
+    .mobile-menu-container .icons{
+        display:flex;
+        margin-top:5rem;
+    }
+    
+    .mobile-menu-container .icons > i{
+        width:44px;
+        height:44px;
+        font-size: 22px;
+    }
+    
+    .mobile-menu-container svg{
+        width:2rem;
+        height:2rem;
+        color:white;
+        position:absolute;
+        top:30px;right:30px;
+    }
+
+
+
     /* Section-1 */
 
 
@@ -26,11 +83,13 @@
             background-color: var(--boxes-color);
             background-repeat: no-repeat;
             height: fit-content;
+            
         }
 
         .first-section .bckgrnd-image {
             position:absolute;
             width:100%;
+            height: 150vh;
             background-position: center ;
             background-size: auto;
             
@@ -39,19 +98,24 @@
         .first-section .bckgrnd-image img{
             position: absolute;
             
-            height: 110vh;
+           
             width:100%;
+            height: 100%;
             margin: 0;
         }
 
         .box-one{
             display: block;
-            max-width: 728px;
+            max-width: 100%;
             max-height:388px;
-            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,255,255,0));
             margin: 12vh 26vh 55vh 26vh;
             z-index:1;
 
+        }
+
+        .box-one .lin-gradient{
+            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,255,255,0));
+           
         }
 
         .first-section .text{
@@ -61,9 +125,10 @@
             font-family: var(--text-font-family);
             text-transform: uppercase;
             padding: 40px 0px 0px 40px;
-            width: 100%;
+            max-width: 700px;
             letter-spacing: -2px;
             transition: all 0.5s;
+            white-space: nowrap;
         }
 
 
@@ -79,14 +144,15 @@
             position:absolute;
             content:'';
             background-color: var(--boxes-color);
-            top:30px;
-            bottom:30px;
+            top:30%;
+            bottom:30%;
             left:10px;
             right:-50px;
             z-index: -1;
         }
 
-        .first-section button{
+        .first-section button {
+            white-space: nowrap;
             position:relative;
             width: auto;
             height: 50px;
@@ -187,7 +253,10 @@
             position: relative;
             justify-content: center;
             gap: 20px;
-            top: -300px;
+            bottom: 100px;
+            width:164px;
+            margin-left: auto;
+            margin-right: auto;
 
         }
 
@@ -211,7 +280,7 @@
             background-color: var(--boxes-color);
             position:relative;
             align-self: center;
-            bottom:170px;
+            bottom:0px;
             z-index: 1;
         }
 
@@ -263,14 +332,14 @@
             border-radius: 20px;
         }
 
-        .second-section .middle-blue-column-2{
-            position:relative;
+        .third-section .middle-blue-column-2{
+            position:absolute;
             width: 30px;
-            height: 200px;
+            height: 100px;
             background-color:var(--boxes-color);
             align-self: center;
-            bottom: -150px;
             z-index: 1;
+            top:-50px;
         }
 
         
@@ -327,6 +396,7 @@
 
         .title .product, .title .range{
             font-size: 57px;
+            
         }
 
         .title .drinks{
@@ -343,6 +413,7 @@
         }
 
             /* Rama titlului din sectiune */
+            /* BEVERAGES */
             /* Reama din stanga */
                 .title .first-cub{
                     position: absolute;
@@ -356,7 +427,7 @@
                 .title .first-cub::before{
                     content:'';
                     background-color: white;
-                    width: 3rem;
+                    width: 4rem;
                     height:0.2em;
                     position:absolute;
                     top:-0.2em;
@@ -365,7 +436,7 @@
                 .title .first-cub::after{
                     content:'';
                     background-color: white;
-                    width: 5rem;
+                    width: 8rem;
                     height:0.2em;
                     position:absolute;
                     bottom:-0.2em;
@@ -387,7 +458,7 @@
                 .title .second-cub::before{
                     content:'';
                     background-color: white;
-                    width: 3rem;
+                    width: 5rem;
                     height:0.2em;
                     position:absolute;
                     top:-0.2em;
@@ -396,7 +467,7 @@
                 .title .second-cub::after{
                     content:'';
                     background-color: white;
-                    width: 5rem;
+                    width: 8rem;
                     height:0.2em;
                     position:absolute;
                     bottom:-0.2em;
@@ -426,7 +497,10 @@
             } 
             
             
-            
+            .box-three .images > div span::before{
+                visibility: hidden;
+            }
+
             .box-three .images > div span{
                 left:1em;
                 transition: all 0.3s;
@@ -665,8 +739,8 @@
                     transition: 0.3s, opacity 0.3s, visibility 0.3s;
                 }
 
-            /* NEWS */
-            .middle-blue-column-3{
+            /* PHOTO */
+            .fourth-section .title .middle-blue-column-3{
                 position:relative;
                 width: 30px;
                 height: 100px;
@@ -675,6 +749,66 @@
                 bottom: -50px;
                 margin-top: 150px;
             }
+
+
+            .fourth-section .title .first-cub{
+                position: absolute;
+                height: 50%;
+                width:0;
+                left: -4.5rem;
+                border: 2px white solid;
+                background-color: white;
+            }
+
+            .fourth-section .title .first-cub::before{
+                content:'';
+                background-color: white;
+                width: 15rem;
+                height:0.2em;
+                position:absolute;
+                top:-0.2em;
+            }
+            
+            .fourth-section .title .first-cub::after{
+                content:'';
+                background-color: white;
+                width: 13rem;
+                height:0.2em;
+                position:absolute;
+                bottom:-0.2em;
+            }
+
+            /* Rama din dreapta */
+
+            .fourth-section .title .second-cub{
+                position: absolute;
+                height: 50%;
+                width:0;
+                right: -4.5rem;
+                border: 2px white solid;
+                background-color: white;
+                transform: rotate(180deg);
+                transform: rotateY(180deg);
+            }
+
+            .fourth-section .title .second-cub::before{
+                content:'';
+                background-color: white;
+                width: 15rem;
+                height:0.2em;
+                position:absolute;
+                top:-0.2em;
+            }
+            
+            .fourth-section .title .second-cub::after{
+                content:'';
+                background-color: white;
+                width: 13rem;
+                height:0.2em;
+                position:absolute;
+                bottom:-0.2em;
+            }
+
 
             /* NEWS section */
             .new-articles{
@@ -717,9 +851,13 @@
             }
 
             .new-articles > div span{
-                position:relative;
+                position: absolute;
                 left: 2em;
-                top:5%;
+                top: 52%;
+            }
+
+            .new-articles > div span::before{
+                visibility: hidden;
             }
 
             .new-articles > div::after{
@@ -933,6 +1071,78 @@
             text-align: center;
         }
 
+
+        /* PHOTO */
+        .title-2 .middle-blue-column-3{
+            position:relative;
+            width: 30px;
+            height: 100px;
+            background-color:var(--boxes-color);
+            align-self: center;
+            bottom: -50px;
+            margin-top: 150px;
+        }
+
+
+        .title-2 .first-cub{
+            position: absolute;
+            height: 50%;
+            width:0;
+            left: -4.5rem;
+            border: 2px white solid;
+            background-color: white;
+        }
+
+        .title-2 .first-cub::before{
+            content:'';
+            background-color: white;
+            width: 9rem;
+            height:0.2em;
+            position:absolute;
+            top:-0.2em;
+        }
+        
+        .title-2 .first-cub::after{
+            content:'';
+            background-color: white;
+            width: 11rem;
+            height:0.2em;
+            position:absolute;
+            bottom:-0.2em;
+        }
+
+        /* Rama din dreapta */
+
+        .title-2 .second-cub{
+            position: absolute;
+            height: 50%;
+            width:0;
+            right: -4.5rem;
+            border: 2px white solid;
+            background-color: white;
+            transform: rotate(180deg);
+            transform: rotateY(180deg);
+        }
+
+        .title-2 .second-cub::before{
+            content:'';
+            background-color: white;
+            width: 9rem;
+            height:0.2em;
+            position:absolute;
+            top:-0.2em;
+        }
+        
+        .title-2 .second-cub::after{
+            content:'';
+            background-color: white;
+            width: 12rem;
+            height:0.2em;
+            position:absolute;
+            bottom:-0.2em;
+        }
+
+
         .middle-blue-column-4{
             display: block;
             position:relative;
@@ -952,6 +1162,8 @@
             margin-bottom: 7rem;
         }
 
+        .fourth-section .images-mobile{display:none;}
+
             .fourth-section .images > img{
                 width: 100%;
                 height: 100%;
@@ -963,23 +1175,23 @@
                 grid-row: span 2;
             }
 
-            .fourth-section .images .btn{
+            .fourth-section .btn{
                 background-color: var(--button-color);
                 display:flex;
-                
-                position: absolute;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
                 border:none;
                 padding: 0.8em 2em;
                 white-space: nowrap;
                 border-radius: 20px;
                 bottom:0;
-                justify-self: center;
                 color: var(--text-color);
                 text-transform: uppercase;
                 transition: 0.3s, ease-out;
             }
         
-            .fourth-section .images .btn:hover{
+            .fourth-section .btn:hover{
                 background-color: var(--button-color-hover);
             }
                 
@@ -1276,6 +1488,75 @@
 
 @media  screen and (max-width:1280px) {
 
+
+    /* Mobile menu animation */
+
+    .mobile-menu-container{
+        display:block;
+        position:fixed;
+        z-index:2;
+        width:100%;
+        height: 100%;
+        margin-left: 100%;
+        transition: all 0.5s;
+    }
+
+    
+
+    .first-section .bckgrnd-image{
+        height:100%;
+    }
+
+    .first-section{
+        height: 1000px;
+    }
+
+    .first-section .mobile-gradient-background{
+        width:100%;
+        height: 100%;
+        position: absolute;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(255,255,255,0));
+
+    }
+
+    .first-section .arrow-right{display:none;}
+    .first-section .arrow-left{display:none;}
+
+    .first-section .bottom-animated-lines{
+        position: relative;
+        bottom:140px;
+    }
+
+    .first-section .text{
+        font-size: 50px;
+        width:100%;
+        padding:0;
+    }
+
+    .first-section button{
+        margin:0;
+    }
+
+    .box-one .lin-gradient{
+        position:relative;
+        background: none;
+        width:50%;
+    }
+
+    .box-one{
+        height: 150%;
+    }
+
+    .middle-blue-column{
+        position:absolute;
+        bottom: 0px;
+    }
+
+
+    .second-section .text{
+        font-size: 32px;
+    }
+
     .box-three{
         overflow-x: hidden;
     }
@@ -1291,7 +1572,10 @@
 
     .box-three .images > div{
         min-width: 135px;
+        font-size: 25px;
     }
+
+
 
 
     .new-articles{
@@ -1304,7 +1588,28 @@
     }
 
 
-    
+    .fifth-section .title{
+        font-size: 43px;
+    }
+
+    .title .product, .title .range{
+        font-size: 32px;
+        
+    }
+
+    .title .drinks{
+        font-size: 13px;
+    }
+
+    .title .beverages{
+        font-size: 13px;
+    }
+
+    .title img{
+        width:55px;
+        height: 40px;
+    }
+
     .fifth-section .infos{
         position: relative;
         grid-template-columns: repeat(3, 1fr);
@@ -1321,8 +1626,119 @@
     }
     
 
+
+    .sixth-section .title{
+        font-size: 43px;
+    }
+
+
+    .sixth-section .things{
+        overflow-x: auto;
+        justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 100%;
+    }
+
+    .sixth-section .things > div{
+        min-width: 232px;
+        min-height: 300px;
+    }
+
 }
 
+
+
 @media screen and (max-width:900px) {
+    .fourth-section .images{
+        display: none;
+    }
+
+    .fourth-section .images-mobile{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+
+    .fourth-section .images-mobile > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin:0;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .box-one .lin-gradient{
+        position: absolute;
+        left:0;
+        bottom:40rem;
+    }
+
+    .first-section .bottom-animated-lines{
+        position: relative;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .first-section .text{
+        padding: 0;
+    }
+
+    .first-section button{
+        margin: 0;
+    }
+
+
+    .fifth-section .title{
+        width:100%;
+    }
+
+    .sixth-section .title{
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    .title .first-cub{
+        left: -2rem;
+    }
+
+    .title .drinks{
+        width: 80%;
+        align-self: center;
+    }
+
+    .title .second-cub{
+        right: -2.5rem;
+    }
+
+    .fourth-section .title .first-cub{
+        left: 0;
+    }
+
+    .fourth-section .title .first-cub::before{
+        width: 12rem;
+    }
+
+    .fourth-section .title .first-cub::after{
+        width: 11rem;
+    }
+
+    .fourth-section .title .second-cub{
+        right:0;
+    }
+
+    .fourth-section .title .second-cub::before{
+        width: 12rem;
+    }
+
+    .fourth-section .title .second-cub::after{
+        width: 11rem;
+    }
     
 }
+

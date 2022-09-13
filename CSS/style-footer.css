@@ -21,7 +21,7 @@ body{
     position: relative;
 }
 
-.container{
+.container, .container-mobile{
     width:100%;
     background-color: var(--cookies-box-color);
     margin-top: -1px;
@@ -35,6 +35,8 @@ body{
     overflow: hidden;
 }
 
+.container-mobile{display:none;}
+
 .container::before{
     content:'';
     
@@ -45,17 +47,12 @@ body{
     margin-top:-2px;
 }
 
-.container .menu{
-    display:flex;
-    width: 50%;
-    justify-content: space-evenly;
-}
 
-.menu ul{
+ul{
     list-style: none;
 }
 
-.menu ul > li{
+ul > li{
     margin-bottom: 1rem;
     cursor:pointer;
 }
@@ -75,4 +72,54 @@ body{
     justify-content: center;
     align-items: center;
     cursor:pointer;
+}
+
+@media screen and (max-width:750px) {
+    .container{display: none;}
+
+    .container-mobile{
+        display:flex;
+        align-items: flex-start;
+        gap:5rem;
+        padding: 10rem 5rem 2rem 2rem;
+    }
+
+    .text-icons{
+        display:flex;
+        width:100%;
+        justify-content: space-around;
+    }
+
+    .menu > ul{
+        padding:0;
+    }
+
+    .container-mobile .icons{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap:1rem;
+    }
+
+    .container-mobile .icons > i{
+        
+        display:flex;
+        border-radius: 30px;
+        border: 2px solid white;
+        justify-content: center;
+        align-items: center;
+        width:32px;
+        height: 32px;
+    }
+
+}
+
+@media screen and (max-width:550px){
+    .container-mobile{
+        flex-direction: column;
+    }
+
+    .text-icons{
+        justify-content: space-between;
+    }
 }
