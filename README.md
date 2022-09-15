@@ -1,4 +1,4 @@
-Donwload the all folder
+Donwload the entire folder
 
 Open the index.html page
 
