@@ -28,12 +28,12 @@ body{
     padding-top: 2rem;
 }
 
-img{
+.menu-container img{
     max-width: 100px;
     max-height: 100px;
 }
 
-ul{
+.menu-container ul{
     display:flex;
     flex-direction: column;
     list-style: none;
@@ -44,23 +44,23 @@ ul{
     margin-top: 4rem;
 }
 
-ul .home{
+.menu-container ul .home{
     border-bottom: 2px solid var(--boxes-color);
     width: min-content;
 }
 
-.icons{
+.menu-container .icons{
     display:flex;
     margin-top:5rem;
 }
 
-.icons > i{
+.menu-container .icons > i{
     width:44px;
     height:44px;
     font-size: 22px;
 }
 
-svg{
+.menu-container svg{
     width:2rem;
     height:2rem;
     color:white;

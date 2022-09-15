@@ -247,9 +247,9 @@ body .cookies-msg .msg{
     }
 
     div .icons{
-        position:fixed;
+        position:absolute;
         margin:0;
-        bottom:50px;
+        bottom:-20vh;
     }
 
     body .logo-age-verification{
